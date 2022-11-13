@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <label for="email">Email</label>
+  <input type="email" id="email">
+</br>
+
+  <label for="password">password</label>
+  <input type="password" id="pass">
+</br>
+  <label for="password">coinfirm password</label>
+  <input type="password" id="cpass">
+</br>
+  <button style="margin:5px ;" id="btn">Submitt</button>
+  
+ 
+</body>
+<script src="../DOM day1/script.js"></script>
+</html>
+
+***************************
+
+// JS file
+
+const a = document.getElementById('btn');
+
+a.addEventListener ('click', ()=>{
+
+    const emails = document.getElementById('email').value
+    const pass = document.getElementById('pass').value
+    const cpass = document.getElementById('cpass').value
+
+    // if(! email.split('').includes('@')){
+    //     console.error('not a valid email');
+    //     return;
+    // }
+
+    
+   if (!emails.split('').includes('@')){
+    console.error('not a valid email');
+   return;
+   }
+
+   if (pass.length < 4 || pass.length > 10){
+    console.error('not a valid pass length');
+    return;
+   }
+
+   if (pass!==cpass){
+    console.error('password does not macth ')
+    return;
+   }
+
+   console.log('Registeration succedful');
+   console.log(alert(`welcome${emails}`));
+})
