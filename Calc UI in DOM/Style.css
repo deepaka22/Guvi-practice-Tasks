@@ -1,0 +1,46 @@
+#mainoutlinebox{
+    height: 80vh;
+    border: 2px solid rgb(39, 90, 230) !important;
+    width: 100% ;
+    margin-top: 2rem;
+    background-color: rgb(161, 161, 167);
+    border-color:aliceblue;
+}
+#innerbox{
+    margin-top:0.5rem; 
+    margin-bottom: 0.5rem;
+    border: 2px solid rgb(195, 195, 209) !important;
+    height: 10vh;
+    /* background-color: rgb(225, 225, 247); */
+    width:100%;
+    padding: 1.5rem;
+    font-size: 45px;
+    font-weight: bold;
+   
+}
+#innermainbox{
+    margin-top:0.5rem;
+    margin-bottom: 0.5rem;
+    border: 2px solid rgb(195, 195, 209) !important;
+    /* height: 50vh; */
+    /* background-color: rgb(225, 225, 247); */
+   
+}
+#table{
+    width: 100%;  
+    border-collapse: collapse;  
+}
+#table1{
+    /* width: 100%; */
+   
+}
+#th{
+    padding: 1.5rem 0 1.5rem 0;
+    text-align: center;
+    font-size: xx-large;
+}
+table,th,td{
+    border: 2px solid black;
+    background-color: rgb(225, 225, 247); 
+}
+
