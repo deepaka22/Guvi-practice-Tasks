@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form-DOM</title>
+  
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script> -->
+<link rel="stylesheet" href="../DOM day1/style.css">
+
+</head>
+<body style="background-color: hwb(36 80% 0%);">
+  <!-- nav bar  -->
+<nav class="navbar  bg-light" id="nav" > 
+  <div id="navdiv">
+      <a class="navbar-brand" >
+        <img src="data:image/jpeg;base64,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" alt="" width="80" height="70" id="image" >
+      </a>
+    </div>
+    <div id="head">Caf'e Coffee Day </div>
+    </nav>
+  <!-- nav bar ends   -->
+  <!-- whole div -->
+  <div class="container-fluid">
+    <div class="row" id="borderb"></div>
+    <div class="row">
+      <!-- left column -->
+      <div class ='col-sm-6' id = "right">
+
+      <form id="myForm" name="contact-form"  onsubmit="functionhandler(event)" >
+            <label for="text" id="test1">First Name <span>*</span></label> </br>
+            <input type="text" class="test2" id = 'fname'  min-length ="2" required> <br>
+
+            <label for="text" id="test1">Last Name <span>*</span></label> </br>
+            <input type="text" class="test2" id = 'sname'  min-length ="2" required>
+            
+            <label for="text" id="test1">Address <span>*</span></label> </br>
+            <input type="text" class="test2" id = 'dno' placeholder="door No & street Name"  min-length ="2"  required>
+            <input type="text" class="test2" id = 'area' placeholder="Area"   min-length ="2" required>
+            <input type="text" class="test2" id = 'land' placeholder="Landmark"  min-length ="2"required >
+
+            <label for="text" id="test1">State <span>*</span></label> </br>
+            <input type="text" class="test2" id = 'st'   min-length ="2" required>
+
+            <label for="number" id="test1">Pincode <span>*</span></label> </br>
+            <input type="number" class="test2"  id ='pcod' max-length ="6" minlength="6" required >  
+
+            <label for="text" id="test1">Country <span>*</span></label> </br>
+            <input type="text" class="test2" id = 'count'  min-length ="2" required >
+
+            <label for="text" id="test1">Select your Food Type : <span>*</span></label> </br>
+
+            <select class="form-select form-select-lg mb-3  form-select form-select-sm test2 " required aria-label="Default select example" id = 'food'  >
+              <option value="">Food</option>
+              <option value="French & Spanish Cuisine" >French & Spanish Cuisine</option>
+              <option value="South Indian">South Indian</option>
+              <option value="Chinese Cuisine">Chinese Cuisine</option>
+              <option value="Continental"> Continental</option>
+              <option value="Caribbean Cuisine">Caribbean Cuisine</option>  
+            </select>
+
+            
+              <button type="submit" class="btn btn-primary button" >Submitt</button>
+              <button type="reset" class="btn btn-danger button" onclick="fun()"  >Reset</button>
+            
+
+        </form>
+
+
+      </div>
+      <!-- end of left colum  -->
+      <div class="col-sm-6" id = "right">
+        <table class="table text-center mt-5">
+          <tr>
+            <th>First Name</th>
+            <td id="f"></td>
+          </tr>
+          <tr>
+            <th>Last Name</th>
+            <td id="s"></td>
+          </tr>
+          <tr >
+            <th rowspan="3">Address</th>
+            <td id="A"></td>
+          </tr>
+          <tr>
+          <td id="B"></td>
+        </tr>
+            <tr>
+             
+              <td id="C1"></td>
+            </tr>
+          
+          <tr>
+            <th>State</th>
+            <td id="Street"></td>
+          </tr>
+          <tr>
+            <th>Pincode</th>
+            <td id="pinh"></td>
+          </tr>
+          <tr>
+            <th>Country</th>
+            <td id="countri"></td>
+          </tr>
+
+          <tr>
+            <th>Your Food</th>
+            <td id="sfood"></td>
+          </tr>
+      </table>
+   
+
+
+
+
+       
+
+
+        
+      </div>
+
+
+
+    </div>
+  </div>
+
+  <!-- <script src="https://app.zenclass.in/sheets/V1/js/zen/suite/bundle.js"></script> -->
+
+  <script src="../DOM day1/script.js"></script>
+
+
+</body>
+
+<!-- <script src="../DOM day1/script.js"></script> -->
+</html>
