@@ -1,0 +1,60 @@
+#nav{
+    width:100%;
+    display: flex;
+    background-color: hwb(36 80% 0%) !important;
+    }
+#navdiv{
+     width:20%;
+     text-align: center;
+}
+
+#image{
+border-radius: 4px;
+
+}
+
+#borderb{
+    border-bottom-style: dashed ;
+    border-color: brown; 
+}
+#head{
+    display: flex;
+    width: 80%;
+    justify-content:center;
+    font-weight: bold;
+    font-size: 35px;
+    align-items: center;
+    font-style: italic;
+}
+#right{
+    height: 110vh;
+    /* border-right-style: solid; */
+    margin-top: 2rem;
+
+}
+#test1{
+    margin-left:2rem; 
+    margin-bottom: 0.3rem;
+    margin-top: 0.3rem;
+    width: 50%;
+}
+.test2{
+    margin-left:2rem; 
+    margin-bottom: 0.3rem;
+    margin-top: 0.3rem;
+    width: 80%;
+    padding: 0.2rem;
+}
+.button{
+    margin-left:2rem; 
+    margin-bottom: 0.3rem;
+    margin-top: 1.0rem;
+    width: 80%;
+    padding: 0.6rem;
+    
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
